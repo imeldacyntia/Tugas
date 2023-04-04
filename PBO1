@@ -1,0 +1,33 @@
+# Functional Programming
+#========================#
+
+# Fungsi menghitung kuadrat dari sebuah angka
+def fungsi_kuadrat(x):
+    return x * x
+
+# Fungsi memfilter angka-angka genap
+def fungsi_filter(angka):
+    return angka % 2 == 0
+
+# Fungsi memetakan angka-angka ke dalam bilangan kelipatan 2
+def fungsi_map(angka):
+    return angka * 2
+
+# List angka
+list_angka = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+
+# Memfilter angka-angka genap dari list_angka
+angka_genap = list(filter(fungsi_filter, list_angka))
+
+# Menghitung kuadrat dari angka-angka genap
+angka_kuadrat = list(map(fungsi_kuadrat, angka_genap))
+
+# Memetakan angka-angka kuadrat ke dalam bilangan kelipatan 2
+angka_double = list(map(fungsi_map, angka_kuadrat))
+
+# Menampilkan hasil
+print(angka_genap)
+print(angka_kuadrat)
+print(angka_double)
+
+
