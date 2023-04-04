@@ -30,4 +30,32 @@ print(angka_genap)
 print(angka_kuadrat)
 print(angka_double)
 
+#================================#
+#OOP
+#===================================#
+class Manusia:
+    def _init_(diri, nama, umur):
+        diri.nama = nama
+        diri.umur = umur
+
+    def berbicara(diri):
+        print("Halo, perkenalkan nama saya", diri.nama, "dan umur saya", diri.umur, "tahun")
+
+class Mahasiswa(Manusia):
+    def _init_(diri, nama, umur, jurusan, universitas):
+        super()._init_(nama, umur)
+        diri.jurusan = jurusan
+        diri.universitas = universitas
+
+    def pendidikan(diri):
+        print("\nSaya sedang menempuh pendidikan S-1 di jurusan", diri.jurusan, "Pada Universitas", diri.universitas)
+
+
+# Membuat objek dari kelas Mahasiswa 
+mahasiswa1 = Mahasiswa("Imelda Cyntia", 18, "Informatika", "Bengkulu")
+
+# Memanggil metode-metode yang ada di dalam objek
+mahasiswa1.berbicara()
+mahasiswa1.pendidikan()
+
 
